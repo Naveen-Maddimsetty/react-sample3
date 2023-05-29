@@ -27,7 +27,7 @@ jobs:
         lfs: true
 
     - run: npm install
-    - run: npm run build  --base href /react-sample3/ --if-present
+    - run: npm run build  --base-href "/react-sample3/" --if-present
     - run: npm test
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
