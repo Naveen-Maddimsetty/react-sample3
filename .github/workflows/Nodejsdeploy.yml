@@ -29,10 +29,11 @@ jobs:
     - run: npm install
     - run: npm run build  --base-href "/react-sample3/" --if-present
     - run: npm test
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v3
       with:
-        token: ${{ secrets.TOKEN }}
-        target_branch: deploy # The branch the action should deploy to.
-        folder: build # The folder the action should deploy.
-        single-commit: true
+          target_branch: deploy
+          build_dir: build
+          enable_jekyll: true
+      env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
