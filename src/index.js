@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Counter />
+    <Counters />
   </React.StrictMode>,
   document.getElementById("root")
 );
