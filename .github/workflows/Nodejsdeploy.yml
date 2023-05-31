@@ -32,7 +32,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v3
       with:
-          target_branch: deploy
+          branch: deploy
           build_dir: build/
           enable_jekyll: true
       env:
