@@ -30,6 +30,7 @@ jobs:
     - run: npm test
     - name: Deploy 🚀
     - uses: AutoModality/action-clean@v1
+    - uses: actions/checkout@v2
       with:
         token: ${{ secrets.TOKEN }}
         target_branch: deploy # The branch the action should deploy to.
