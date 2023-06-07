@@ -31,7 +31,8 @@ jobs:
     - name: Deploy 🚀
     - uses: AutoModality/action-clean@v1
     - uses: actions/checkout@v2
-    
+     # Continuous deployment only for pushes to the dev branch
+      if: github.ref == 'refs/heads/dev' 
       with:
         token: ${{ secrets.TOKEN }}
         target_branch: deploy # The branch the action should deploy to.
